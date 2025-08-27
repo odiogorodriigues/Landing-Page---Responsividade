@@ -39,7 +39,10 @@ p {
 
 #presentation-container {
     padding: 2.5rem 7.5rem;
-    height: 50vh;
+    height: 85vh;
+    background-image: url(/assets/background.png);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 #presentation {
@@ -63,4 +66,8 @@ p {
 
 .container > button {
     margin-top: 2rem;
+}
+
+.background-gradient {
+    background: linear-gradient(180deg, #fff, #d9d9d9);
 }
