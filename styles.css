@@ -33,6 +33,11 @@ h2 {
     margin: 0;
 }
 
+h3 {
+    font-size: 1.5rem;
+
+}
+
 p {
     font-size: 20px;
 }
@@ -40,7 +45,7 @@ p {
 #presentation-container {
     padding: 2.5rem 7.5rem;
     height: 85vh;
-    background-image: url(/assets/background.png);
+    background-image: url(assets/background.png);
     background-repeat: no-repeat;
     background-size: cover;
     display: flex;
@@ -150,4 +155,18 @@ p {
 #social-media {
     display: flex;
     gap: 1rem;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 7.5rem;
+}
+
+.grid-item > h3 {
+    margin-top: .5rem;
+}
+
+.grid-item > p {
+    margin-top: .5rem 0 0;
 }
