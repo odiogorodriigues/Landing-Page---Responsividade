@@ -11,13 +11,13 @@ body {
 }
 
 button {
-    background-color: #F84646;
-    color: #FFF;
+    background-color: #f84646;
+    color: #fff;
     font-weight: 500;
     font-size: 1.5rem;
-    padding: .5rem 1.5rem;
-    border-radius: .5rem;
-    border: none; 
+    padding: 0.5rem 1.5rem;
+    border-radius: 0.5rem;
+    border: none;
     cursor: pointer;
 }
 
@@ -28,14 +28,15 @@ h1 {
 }
 
 h2 {
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 800;
     margin: 0;
 }
 
 h3 {
     font-size: 1.5rem;
-
+    font-weight: 800;
+    margin: 0;
 }
 
 p {
@@ -74,7 +75,7 @@ p {
 }
 
 .contact-title {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
 .container > p {
@@ -83,11 +84,11 @@ p {
 
 .container > button {
     margin-top: 2rem;
-    transition: opacity .5s ease-in-out, transform .5s .2s;
+    transition: opacity 0.5s ease-in-out, transform 0.5s 0.2s;
 }
 
 .container > button:hover {
-    opacity: .8;
+    opacity: 0.8;
     transform: scale(1.1);
 }
 
@@ -96,16 +97,21 @@ p {
 }
 
 .background-red {
-    background-color: #F84646;
-    color: #FFF;
+    background-color: #f84646;
+    color: #fff;
 }
 
 .background-grey {
-    background-color: #F4F5F7;
+    background-color: #f4f5f7;
 }
 
 .article-container {
     display: flex;
+}
+
+.article-container > img {
+    width: 50%;
+    object-fit: cover;
 }
 
 .article-container:nth-child(even) {
@@ -140,11 +146,11 @@ p {
     margin-bottom: 1rem;
 }
 
-.footer-list > ul > li:last-child  {
+.footer-list > ul > li:last-child {
     margin-bottom: 0;
 }
 
-.footer-list > ul > li:first-child  {
+.footer-list > ul > li:first-child {
     margin-bottom: 1.5rem;
     font-weight: 700;
 }
@@ -168,11 +174,11 @@ p {
 }
 
 .grid-item > h3 {
-    margin-top: .5rem;
+    margin-top: 0.5rem;
 }
 
 .grid-item > p {
-    margin-top: .5rem 0 0;
+    margin-top: 0.5rem 0 0;
 }
 
 .grid-container-companies {
@@ -184,7 +190,7 @@ p {
 }
 
 .grid-item-companies {
-    background-color: #FFF;
+    background-color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -225,4 +231,122 @@ p {
 
 .company-9 {
     grid-area: 3/5;
+}
+
+/* tablet */
+@media only screen and (max-width: 1023px) {
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #presentation-container {
+        padding: 5rem 4rem;
+    }
+
+    .container {
+        padding: 5rem 4rem;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .grid-container-companies {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+    }
+
+    .company-1,
+    .company-2,
+    .company-3,
+    .company-4,
+    .company-5,
+    .company-6,
+    .company-7,
+    .company-8,
+    .company-9 {
+        grid-area: auto;
+    }
+}
+
+/* mobile */
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: 2.5rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    #presentation-container {
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+
+    .grid-container {
+        grid-template-columns: repeat(1, 1fr);
+    }
+
+    #qualities {
+        flex-direction: column;
+    }
+
+    #qualities > img {
+        transform: rotate(90deg);
+        margin: 2.5rem 0;
+    }
+
+    .article-container {
+        flex-direction: column-reverse;
+    }
+
+    .article-container:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+
+    .article-details {
+        text-align: center;
+        align-items: normal;
+        margin: 2rem 0 0 0;
+    }
+
+    .article-container:nth-child(even) > .article-details {
+        margin: 2rem 0 0 0;
+    }
+
+    .article-container > img {
+        width: 100%;
+    }
+
+    .grid-container-companies {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-item-companies {
+        height: 6rem;
+    }
+
+    .footer-list {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .footer-list > ul {
+        margin-top: 3rem;
+    }
+
+    .footer-list > ul:first-child {
+        margin-top: 0;
+    }
+
+    .footer-copyright {
+        flex-direction: column-reverse;
+        gap: 4rem;
+    }
 }
